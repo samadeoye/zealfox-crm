@@ -1,0 +1,22 @@
+a {
+    text-decoration: none !important;
+}
+
+.theLogo img {
+    width: 100px;
+}
+
+.theNavLogo img {
+    width: 80px;
+}
+
+#thecrmTable form {
+    display: inline;
+}
+#thecrmTable img {
+    width: 50px !important;
+}
+
+.modalLogoImg {
+    width: 50px !important;
+}
