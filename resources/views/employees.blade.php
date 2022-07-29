@@ -43,12 +43,19 @@
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label">Company</label>
+                                        @if($data['companies']->count() > 0)
                                         <select name="company_id" class="form-control" required>
                                             <option value="" selected disabled>Select a company</option>
                                             @foreach($data['companies'] as $comp)
                                             <option value="{{ $comp->id }}">{{ $comp->name }}</option>
                                             @endforeach
                                         </select>
+                                        @else
+                                        <a class="btn btn-primary mb-2" href="{{ route('companies.index') }}">Add a company</a>
+                                        <select name="company_id" class="form-control" required>
+                                            <option value="" selected disabled>No company yet</option>
+                                        </select>
+                                        @endif
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label">Email</label>
@@ -98,7 +105,11 @@
                                                 <td>{{ $sn }}</td>
                                                 <td>{{ $emp->first_name }}</td>
                                                 <td>{{ $emp->last_name }}</td>
-                                                <td>{{ $emp->company_id }}</td>
+                                                @php
+                                                $company = \App\Models\Companies::where('id', $emp->company_id)
+                                                ->first();
+                                                @endphp
+                                                <td>{{ $company->name; }}</td>
                                                 <td>{{ $emp->email }}</td>
                                                 <td class="text-center">{{ $emp->phone }}</td>
                                                 <td>{{ $emp->created_at }}</td>
