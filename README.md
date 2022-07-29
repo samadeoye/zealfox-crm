@@ -13,8 +13,8 @@ The system can be accessed with the following details:
 ## Running the Project
 - download the project
 - run composer install
-- create .env file, copy .example.env content into it, and set up your configurations
-- create a database and set the name in the .env file
+- rename .env.example file to .env, and set up your configurations
+- create a database and set the name in the .env file, alongside your other DB configurations
 - run the following commands:
 
 ```
