@@ -18,6 +18,10 @@ The system can be accessed with the following details:
 - run the following commands:
 
 ```
+composer install
+```
+
+```
 php artisan key:generate
 ```
 
