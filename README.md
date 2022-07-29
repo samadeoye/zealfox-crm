@@ -37,4 +37,8 @@ php artisan db:seed --class=UserSeeder
 php artisan serve
 ```
 
+```
+php artisan storage:link
+```
+
 - access the project from your browser with 127.0.01:8000 or localhost:8000 (depending on your configuration).
