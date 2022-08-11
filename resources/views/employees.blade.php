@@ -114,12 +114,12 @@
                                                 <td class="text-center">{{ $emp->phone }}</td>
                                                 <td>{{ $emp->created_at }}</td>
                                                 <td>
-                                                    <a data-bs-toggle="modal" data-bs-target="#editModal" class="btn btn-primary">Edit</a>
-                                                    <a data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-danger">Delete</a>
+                                                    <a data-bs-toggle="modal" data-bs-target="#editModal{{$emp->id}}" class="btn btn-primary">Edit</a>
+                                                    <a data-bs-toggle="modal" data-bs-target="#deleteModal{{$emp->id}}" class="btn btn-danger">Delete</a>
                                                 </td>
 
                                                 <!-- Edit Modal -->
-                                                <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                                                <div class="modal fade" id="editModal{{$emp->id}}" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
                                                     <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
@@ -168,7 +168,7 @@
 
 
                                                 <!-- Delete Modal -->
-                                                <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                                                <div class="modal fade" id="deleteModal{{$emp->id}}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
                                                     <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
