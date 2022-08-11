@@ -104,12 +104,12 @@
                                                 <td>{{ $comp->country }}</td>
                                                 <td>{{ $comp->created_at }}</td>
                                                 <td>
-                                                    <a data-bs-toggle="modal" data-bs-target="#editModal" class="btn btn-primary">Edit</a>
-                                                    <a data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-danger">Delete</a>
+                                                    <a data-bs-toggle="modal" data-bs-target="#editModal{{$comp->id}}" class="btn btn-primary">Edit</a>
+                                                    <a data-bs-toggle="modal" data-bs-target="#deleteModal{{$comp->id}}" class="btn btn-danger">Delete</a>
                                                 </td>
 
                                                 <!-- Edit Modal -->
-                                                <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                                                <div class="modal fade" id="editModal{{$comp->id}}" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
                                                     <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
@@ -156,7 +156,7 @@
 
 
                                                 <!-- Delete Modal -->
-                                                <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                                                <div class="modal fade" id="deleteModal{{$comp->id}}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
                                                     <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
